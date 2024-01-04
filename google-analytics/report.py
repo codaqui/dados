@@ -24,6 +24,8 @@ async def sample_run_report(property_id = PROPERTY_ID):
         property= f"properties/{PROPERTY_ID}",
         dimensions=[
             Dimension(name='pagePathPlusQueryString'),
+            Dimension(name='year'),
+            Dimension(name='month'),
             ],
         metrics=[
             Metric(name='activeUsers'),
@@ -69,6 +71,8 @@ async def sample_run_report(property_id = PROPERTY_ID):
     pages_info = []
     for row in page_response.rows:
         page_path = row.dimension_values[0].value
+        year = row.dimension_values[1].value
+        month = row.dimension_values[2].value
         active_users = row.metric_values[0].value
         screen_page_views = row.metric_values[1].value
         screen_page_views_session = row.metric_values[2].value
@@ -79,6 +83,8 @@ async def sample_run_report(property_id = PROPERTY_ID):
         if page_path != "/":
             pages_info.append({
                 "pagePath": page_path,
+                "year": year,
+                "month": month,
                 "activeUsers": active_users,
                 "screenPageViews": screen_page_views,
                 "screenPageViewsPerSession": screen_page_views_session,
@@ -129,6 +135,19 @@ async def sample_run_report(property_id = PROPERTY_ID):
     with open("data/website_dimensions_info.json", "w") as f:
         f.write(json.dumps(website_dimensions_info, indent = 4))
     
+    # Request for earliest recorded data
+    earliest_data_request = RunReportRequest(
+        property= f"properties/{PROPERTY_ID}",
+        dimensions=[
+            Dimension(name='date'),
+            ],
+        metrics=[Metric(name='sessions')],  # Placeholder metric
+        date_ranges=[DateRange(start_date="2020-01-01", end_date="today")],  # Large date range
+)
+    earliest_data_response = await client.run_report(earliest_data_request)
+    # Get the earliest date from the first row
+    earliest_date = earliest_data_response.rows[0].dimension_values[0].value
+    print(f"Data started being recorded on {earliest_date}")
 
 # Run the async function
 asyncio.run(sample_run_report())
