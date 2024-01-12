@@ -195,10 +195,10 @@ async def sample_run_report(property_id = PROPERTY_ID):
 asyncio.run(sample_run_report())
 
 # Function to upload a file to Google Drive
-def upload_file_to_drive(filename, mimetype, title, folder_name, TOKEN_FILE):
+def upload_file_to_drive(filename, mimetype, title, folder_name, creds):
 
     # Load the credentials from the token
-    creds = pickle.loads(base64.b64decode(TOKEN_FILE))
+    #creds = pickle.loads(base64.b64decode(TOKEN_FILE))
 
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
@@ -209,7 +209,7 @@ def upload_file_to_drive(filename, mimetype, title, folder_name, TOKEN_FILE):
         creds = flow.run_local_server(port=0)
 
     # Save the credentials for the next run
-    TOKEN_FILE = base64.b64encode(pickle.dumps(creds)).decode('utf-8')
+    #TOKEN_FILE = base64.b64encode(pickle.dumps(creds)).decode('utf-8')
 
     # Build the Drive service
     drive_service = build('drive', 'v3', credentials=creds)
