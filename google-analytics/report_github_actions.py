@@ -9,7 +9,7 @@ from google.analytics.data_v1beta.types import (
     Metric,
     RunReportRequest,
 )
-# Google Drive API
+# Google Drive API 
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
@@ -35,7 +35,8 @@ oauth_credentials = os.getenv('OAUTH_CREDENTIALS')
 service_account_credentials = json.loads(service_account_credentials)
 oauth_credentials = json.loads(oauth_credentials)
 token_pickle = base64.b64decode(token_pickle_base64)
-token = pickle.loads(io.BytesIO(token_pickle))
+token = pickle.loads(token_pickle)
+#token = pickle.loads(io.BytesIO(token_pickle))
 
 # Get the date of the last month
 now = datetime.now()
