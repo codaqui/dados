@@ -1,0 +1,28 @@
+name: Run report
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Run report
+      run: python report_github_actions.py
+      env:
+        SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.SERVICE_ACCOUNT_CREDENTIALS }}
+        PROPERTY_ID: ${{ secrets.PROPERTY_ID }}
+        TOKEN_PICKLE: ${{ secrets.TOKEN_PICKLE }}
+        OAUTH_CREDENTIALS: ${{ secrets.OAUTH_CREDENTIALS }}
