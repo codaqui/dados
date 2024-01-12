@@ -195,7 +195,7 @@ async def sample_run_report(property_id = PROPERTY_ID):
 asyncio.run(sample_run_report())
 
 # Function to upload a file to Google Drive
-def upload_file_to_drive(filename, mimetype, title, folder_name):
+def upload_file_to_drive(filename, mimetype, title, folder_name, TOKEN_FILE):
 
     # Load the credentials from the token
     creds = pickle.loads(base64.b64decode(TOKEN_FILE))
@@ -260,4 +260,4 @@ def upload_file_to_drive(filename, mimetype, title, folder_name):
         print(f'File ID: {file.get("id")} (new file)')
 
 # Upload the file to Google Drive
-upload_file_to_drive("data/pages_info.json", "application/json", "pages_info.json", "Dados-Codaqui")
+upload_file_to_drive("data/pages_info.json", "application/json", "pages_info.json", "Dados-Codaqui", TOKEN_FILE)
