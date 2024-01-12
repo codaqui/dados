@@ -55,7 +55,9 @@ credentials = Credentials.from_service_account_info(service_account_credentials)
 client = BetaAnalyticsDataAsyncClient(credentials=credentials)
 
 async def sample_run_report(property_id = PROPERTY_ID):
-    #client = BetaAnalyticsDataAsyncClient()
+    
+    credentials = Credentials.from_service_account_info(service_account_credentials)
+    client = BetaAnalyticsDataAsyncClient(credentials=credentials)
   
     # Request for page-specific data
     page_request = RunReportRequest(
