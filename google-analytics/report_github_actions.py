@@ -1,6 +1,8 @@
 import asyncio
 import pandas as pd
 # Google Analytics GA4 API
+from google.oauth2.service_account import Credentials
+#from google.auth.credentials import AnonymousCredentials
 from google.analytics.data_v1beta import BetaAnalyticsDataAsyncClient
 from google.analytics.data_v1beta.types import (
     DateRange,
@@ -9,7 +11,6 @@ from google.analytics.data_v1beta.types import (
     RunReportRequest,
 )
 # Google Drive API
-from google.auth.credentials import AnonymousCredentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
@@ -49,7 +50,8 @@ TOKEN_FILE = token
 SCOPES = ['https://www.googleapis.com/auth/drive.file']
 
 # Set up Google Analytics client
-credentials = AnonymousCredentials.from_service_account_info(service_account_credentials)
+credentials = Credentials.from_service_account_info(service_account_credentials)
+#credentials = AnonymousCredentials.from_service_account_info(service_account_credentials)
 client = BetaAnalyticsDataAsyncClient(credentials=credentials)
 
 async def sample_run_report(property_id = PROPERTY_ID):
