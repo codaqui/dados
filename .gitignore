@@ -1,2 +1,10 @@
 # .gitignore
-service-account.json
+service_account.json
+google-analytics/service_account.json
+google-analytics/token.pickle
+google-analytics/oauth_credentials.json
+google-analytics/report.py
+data/website_info.json
+data/website_dimensions_info.json
+data/pages_info.json
+google-analytics/minify.py

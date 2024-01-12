@@ -1,7 +1,8 @@
+@ -1,262 +0,0 @@
 import asyncio
-import os
 import pandas as pd
-import json
+# Google Analytics GA4 API
+from google.auth.credentials import AnonymousCredentials
 from google.analytics.data_v1beta import BetaAnalyticsDataAsyncClient
 from google.analytics.data_v1beta.types import (
     DateRange,
@@ -9,7 +10,7 @@ from google.analytics.data_v1beta.types import (
     Metric,
     RunReportRequest,
 )
-# Google Drive APIs
+# Google Drive API
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
@@ -18,16 +19,38 @@ import pickle
 # Getting the date for prepation to Github Actions
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+# OS to find files, but now also to get environment variables from github repository
+import os
+import json
+# Convert back the TOKEN.PICKLE and load it
+import base64
+import io
 
+# Get environment variables
+service_account_credentials = os.getenv('SERVICE_ACCOUNT_CREDENTIALS')
+property_id = os.getenv('PROPERTY_ID')
+token_pickle_base64 = os.getenv('TOKEN_PICKLE')
+oauth_credentials = os.getenv('OAUTH_CREDENTIALS')
+
+# Convert credentials and token from JSON and base64 to Python objects
+service_account_credentials = json.loads(service_account_credentials)
+oauth_credentials = json.loads(oauth_credentials)
+token_pickle = base64.b64decode(token_pickle_base64)
+token = pickle.loads(io.BytesIO(token_pickle))
+
+# Get the date of the last month
 now = datetime.now()
-
 LAST_MONTH = (now.replace(day=1) - relativedelta(days=1)).strftime('%Y-%m-%d')
 
-PROPERTY_ID = 337372858
+# Set up constants
+PROPERTY_ID = property_id
+CREDENTIALS_FILE = oauth_credentials
+TOKEN_FILE = token
+SCOPES = ['https://www.googleapis.com/auth/drive.file']
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = 'google-analytics\service_account.json'
-
-client = BetaAnalyticsDataAsyncClient()
+# Set up Google Analytics client
+credentials = AnonymousCredentials.from_service_account_info(service_account_credentials)
+client = BetaAnalyticsDataAsyncClient(credentials=credentials)
 
 async def sample_run_report(property_id = PROPERTY_ID):
     client = BetaAnalyticsDataAsyncClient()
@@ -76,10 +99,12 @@ async def sample_run_report(property_id = PROPERTY_ID):
     )
 
 
+    # Run requests and get responses
     page_response = await client.run_report(page_request)
     website_response = await client.run_report(website_request)
     website_dimensions_response = await client.run_report(website_dimensions_request)
 
+    # Process responses and save data
     print("Report result:")
     pages_info = []
     for row in page_response.rows:
@@ -164,15 +189,6 @@ async def sample_run_report(property_id = PROPERTY_ID):
 
 # Run the async function
 asyncio.run(sample_run_report())
-
-# The path to your OAuth 2.0 credentials
-CREDENTIALS_FILE = 'google-analytics/oauth_credentials.json'
-
-# The path to the token file
-TOKEN_FILE = 'google-analytics/token.pickle'
-
-# The scopes that your application needs access to
-SCOPES = ['https://www.googleapis.com/auth/drive.file']
 
 # Function to upload a file to Google Drive
 def upload_file_to_drive(filename, mimetype, title, folder_name):
