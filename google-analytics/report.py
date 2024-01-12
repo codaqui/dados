@@ -9,20 +9,6 @@ from google.analytics.data_v1beta.types import (
     Metric,
     RunReportRequest,
 )
-# Google Drive APIs
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
-from googleapiclient.discovery import build
-from googleapiclient.http import MediaFileUpload
-import pickle
-# Getting the date for prepation to Github Actions
-from datetime import datetime
-from dateutil.relativedelta import relativedelta
-
-# Get the current date
-now = datetime.now()
-# Get the last day of the last month
-LAST_MONTH = (now.replace(day=1) - relativedelta(days=1)).strftime('%Y-%m-%d')
 
 PROPERTY_ID = 337372858
 
@@ -37,7 +23,7 @@ async def sample_run_report(property_id = PROPERTY_ID):
     page_request = RunReportRequest(
         property= f"properties/{PROPERTY_ID}",
         dimensions=[
-            Dimension(name='pagePath'),
+            Dimension(name='pagePathPlusQueryString'),
             Dimension(name='year'),
             Dimension(name='month'),
             ],
@@ -49,7 +35,7 @@ async def sample_run_report(property_id = PROPERTY_ID):
             Metric(name='averageSessionDuration'),
             Metric(name='bounceRate'),
         ],
-        date_ranges=[DateRange(start_date="2020-01-01", end_date=LAST_MONTH)],
+        date_ranges=[DateRange(start_date="2020-01-01", end_date="today")],
     )
 
     # Request for website-wide data
@@ -165,84 +151,3 @@ async def sample_run_report(property_id = PROPERTY_ID):
 
 # Run the async function
 asyncio.run(sample_run_report())
-
-# The path to your OAuth 2.0 credentials
-CREDENTIALS_FILE = 'google-analytics/oauth_credentials.json'
-
-# The path to the token file
-TOKEN_FILE = 'google-analytics/token.pickle'
-
-# The scopes that your application needs access to
-SCOPES = ['https://www.googleapis.com/auth/drive.file']
-
-# Function to upload a file to Google Drive
-def upload_file_to_drive(filename, mimetype, title, folder_name):
-    creds = None
-
-    # Load the credentials from the token file if it exists
-    if os.path.exists(TOKEN_FILE):
-        with open(TOKEN_FILE, 'rb') as token:
-            creds = pickle.load(token)
-
-    # If there are no (valid) credentials available, let the user log in.
-    if not creds or not creds.valid:
-        if creds and creds.expired and creds.refresh_token:
-            creds.refresh(Request())
-        else:
-            flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
-            creds = flow.run_local_server(port=0)
-
-        # Save the credentials for the next run
-        with open(TOKEN_FILE, 'wb') as token:
-            pickle.dump(creds, token)
-
-    # Build the Drive service
-    drive_service = build('drive', 'v3', credentials=creds)
-
-    # Search for the folder
-    response = drive_service.files().list(
-        q=f"name='{folder_name}' and mimeType='application/vnd.google-apps.folder'",
-        spaces='drive',
-        fields='files(id, name)').execute()
-    folders = response.get('files', [])
-
-    # If the folder exists, use it. If not, create it.
-    if not folders:
-        folder_metadata = {
-            'name': folder_name,
-            'mimeType': 'application/vnd.google-apps.folder'
-        }
-        folder = drive_service.files().create(body=folder_metadata, fields='id').execute()
-        print(f'Folder ID: {folder.get("id")}')
-    else:
-        folder = folders[0]
-        print(f'Folder ID: {folder.get("id")} (existing folder)')
-
-    # Search for the file in the folder
-    response = drive_service.files().list(
-        q=f"name='{title}' and '{folder.get('id')}' in parents",
-        spaces='drive',
-        fields='files(id, name)').execute()
-    files = response.get('files', [])
-
-    # If the file exists, update it. If not, create it.
-    if files:
-        file = files[0]
-        # Update the file
-        media = MediaFileUpload(filename, mimetype=mimetype, resumable=True)
-        updated_file = drive_service.files().update(
-            fileId=file.get('id'),
-            media_body=media).execute()
-        print(f'File ID: {updated_file.get("id")} (updated file)')
-    else:
-        # Create the file
-        file_metadata = {
-            'name': title,
-            'parents': [folder.get('id')]
-        }
-        media = MediaFileUpload(filename, mimetype=mimetype)
-        file = drive_service.files().create(body=file_metadata, media_body=media, fields='id').execute()
-        print(f'File ID: {file.get("id")} (new file)')
-
-# Upload the file to Google Drive
-upload_file_to_drive("data/pages_info.json", "application/json", "pages_info.json", "Dados-Codaqui")
