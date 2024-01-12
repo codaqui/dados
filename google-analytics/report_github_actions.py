@@ -1,7 +1,6 @@
 import asyncio
 import pandas as pd
 # Google Analytics GA4 API
-from google.auth.credentials import AnonymousCredentials
 from google.analytics.data_v1beta import BetaAnalyticsDataAsyncClient
 from google.analytics.data_v1beta.types import (
     DateRange,
@@ -9,7 +8,8 @@ from google.analytics.data_v1beta.types import (
     Metric,
     RunReportRequest,
 )
-# Google Drive API 
+# Google Drive API
+from google.auth.credentials import AnonymousCredentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
