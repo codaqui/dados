@@ -31,7 +31,7 @@ jobs:
     - name: Run report
       run: |
         DATE=$(date +"%d-%m-%Y")
-        FIRST_DAY=$(date -d "-1 month" +%Y-%m-01)
+        FIRST_DAY=$(date -d "-1 month" +01-%m-%Y)
         echo Running report for $FIRST_DAY - $DATE
         poetry run python main.py ${{secrets.PROPERTY_ID}} $FIRST_DAY $DATE
       env:
