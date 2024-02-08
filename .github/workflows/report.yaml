@@ -1,8 +1,9 @@
-name: Run report
+name: Report Update
 
 on:
   schedule:
-    - cron: '0 0 1 * *'
+    # Second day of the month UTC
+    - cron: '0 0 2 * *'
   workflow_dispatch:
 
 jobs:
@@ -11,19 +12,37 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.8
-      uses: actions/setup-python@v2
+    - uses: actions/checkout@v3
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v3
       with:
-        python-version: 3.8
+        python-version: 3.12
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install poetry
+
+    - name: Poetry install
+      run: poetry install --no-dev --no-root
+
+
     - name: Run report
-      run: python google-analytics/report_github_actions.py
+      run: |
+        DATE=$(date +"%d-%m-%Y")
+        FIRST_DAY=$(date -d "-1 month" +%Y-%m-01)
+        echo Running report for $FIRST_DAY - $DATE
+        poetry run python main.py ${{secrets.PROPERTY_ID}} $FIRST_DAY $DATE
       env:
         SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.SERVICE_ACCOUNT_CREDENTIALS }}
         PROPERTY_ID: ${{ secrets.PROPERTY_ID }}
-        TOKEN_PICKLE: ${{ secrets.TOKEN_PICKLE }}
-        OAUTH_CREDENTIALS: ${{ secrets.OAUTH_CREDENTIALS }}
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.email "contato@codaqui.dev"
+        git config --global user.name "Codaqui Bot"
+        git add .
+        DATE=$(date +"%d-%m-%Y")
+        FIRST_DAY=$(date -d "-1 month" +%Y-%m-01)
+        git commit -m "Update report for $FIRST_DAY - $DATE"
