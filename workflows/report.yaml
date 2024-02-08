@@ -37,3 +37,12 @@ jobs:
       env:
         SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.SERVICE_ACCOUNT_CREDENTIALS }}
         PROPERTY_ID: ${{ secrets.PROPERTY_ID }}
+
+    - name: Commit and push changes
+      run: |
+        git config --global user.email "contato@codaqui.dev"
+        git config --global user.name "Codaqui Bot"
+        git add .
+        DATE=$(date +"%d-%m-%Y")
+        FIRST_DAY=$(date -d "-1 month" +%Y-%m-01)
+        git commit -m "Update report for $FIRST_DAY - $DATE"
