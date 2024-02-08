@@ -47,3 +47,4 @@ jobs:
         DATE=$(date +"%d-%m-%Y")
         FIRST_DAY=$(date -d "-1 month" +%Y-%m-01)
         git commit -m "Update report for $FIRST_DAY - $DATE"
+        git push origin HEAD:main
