@@ -65,6 +65,8 @@ flowchart TD
 ## Desenvolvimento/Colaboração
 
 - [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
+- [Black](https://github.com/psf/black)
+- [Pre-commit](https://pre-commit.com/)
 
 ## TODO
 

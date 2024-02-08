@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "data analytics codaqui"
+version = "0.0.1"
+description = "Projeto de analise de dados e scraping de dados para Codaqui."
+authors = [
+    "Allan Gadelha <c.allan.gadelha@gmail.com>",
+    "Enderson Menezes <endersonster@gmail.com>"
+]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+pandas = "^2.2.0"
+asyncio = "^3.4.3"
+google-analytics-data = "^0.18.5"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.1.1"
+isort = "^5.13.2"
+flake8 = "^7.0.0"
+pre-commit = "^3.6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
