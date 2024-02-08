@@ -2,8 +2,8 @@ name: Report Update
 
 on:
   schedule:
-    # Second day of the month UTC
-    - cron: '0 0 2 * *'
+    # First day of the month at 2:00 UTC is on BRL last day of the month at 23:00
+    - cron: '0 2 1 * *'
   workflow_dispatch:
 
 jobs:
