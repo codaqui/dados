@@ -33,6 +33,7 @@ jobs:
         DATE=$(date +"%d-%m-%Y")
         FIRST_DAY=$(date -d "-1 month" +01-%m-%Y)
         echo Running report for $FIRST_DAY - $DATE
+        cat ${{secrets.SERVICE_ACCOUNT_CREDENTIALS}} > service_account.json
         poetry run python main.py ${{secrets.PROPERTY_ID}} $FIRST_DAY $DATE
       env:
         SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.SERVICE_ACCOUNT_CREDENTIALS }}
