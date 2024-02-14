@@ -7,7 +7,7 @@
         "screenPageViews": "1349",
         "screenPageViewsPerSession": "1.3369672943508424",
         "screenPageViewPerUser": "1.6799501867995019",
-        "averageSessionDuration": "139.73729724380576",
+        "averageSessionDuration": "139.73729724380573",
         "bounceRate": "0.29038652130822595"
     },
     {
@@ -18,8 +18,19 @@
         "screenPageViews": "786",
         "screenPageViewsPerSession": "1.1963470319634704",
         "screenPageViewPerUser": "1.5203094777562862",
-        "averageSessionDuration": "157.30839931811261",
+        "averageSessionDuration": "157.30839931811263",
         "bounceRate": "0.14764079147640791"
+    },
+    {
+        "pagePath": "/trilhas/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "336",
+        "screenPageViews": "413",
+        "screenPageViewsPerSession": "1.183381088825215",
+        "screenPageViewPerUser": "1.2291666666666667",
+        "averageSessionDuration": "68.889777429799423",
+        "bounceRate": "0.35816618911174786"
     },
     {
         "pagePath": "/trilhas/javascript/",
@@ -29,19 +40,41 @@
         "screenPageViews": "412",
         "screenPageViewsPerSession": "1.1605633802816901",
         "screenPageViewPerUser": "1.3918918918918919",
-        "averageSessionDuration": "125.06210301971831",
+        "averageSessionDuration": "125.06210301971832",
         "bounceRate": "0.11267605633802817"
     },
     {
-        "pagePath": "/trilhas/",
+        "pagePath": "/google-colab/python-101/",
         "year": "2024",
         "month": "02",
-        "activeUsers": "125",
-        "screenPageViews": "153",
-        "screenPageViewsPerSession": "1.1953125",
-        "screenPageViewPerUser": "1.224",
-        "averageSessionDuration": "57.311511515625007",
-        "bounceRate": "0.3359375"
+        "activeUsers": "96",
+        "screenPageViews": "135",
+        "screenPageViewsPerSession": "1.0074626865671641",
+        "screenPageViewPerUser": "1.40625",
+        "averageSessionDuration": "214.4142585298508",
+        "bounceRate": "0.30597014925373134"
+    },
+    {
+        "pagePath": "/quero/mentoria/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "92",
+        "screenPageViews": "118",
+        "screenPageViewsPerSession": "1.1132075471698113",
+        "screenPageViewPerUser": "1.2826086956521738",
+        "averageSessionDuration": "36.497393094339621",
+        "bounceRate": "0.21698113207547171"
+    },
+    {
+        "pagePath": "/quero/estudar/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "57",
+        "screenPageViews": "71",
+        "screenPageViewsPerSession": "1.1833333333333333",
+        "screenPageViewPerUser": "1.2456140350877194",
+        "averageSessionDuration": "22.413333766666668",
+        "bounceRate": "0.016666666666666666"
     },
     {
         "pagePath": "/trilhas/css3/",
@@ -51,7 +84,7 @@
         "screenPageViews": "71",
         "screenPageViewsPerSession": "1.126984126984127",
         "screenPageViewPerUser": "1.290909090909091",
-        "averageSessionDuration": "61.602794777777781",
+        "averageSessionDuration": "61.602794777777774",
         "bounceRate": "0.047619047619047616"
     },
     {
@@ -62,8 +95,19 @@
         "screenPageViews": "70",
         "screenPageViewsPerSession": "1.1475409836065573",
         "screenPageViewPerUser": "1.2962962962962963",
-        "averageSessionDuration": "46.402231786885238",
+        "averageSessionDuration": "46.402231786885253",
         "bounceRate": "0.21311475409836064"
+    },
+    {
+        "pagePath": "/team/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "51",
+        "screenPageViews": "70",
+        "screenPageViewsPerSession": "1.2280701754385965",
+        "screenPageViewPerUser": "1.3725490196078431",
+        "averageSessionDuration": "10.151179631578946",
+        "bounceRate": "0"
     },
     {
         "pagePath": "/quero/estudar/",
@@ -73,30 +117,19 @@
         "screenPageViews": "70",
         "screenPageViewsPerSession": "1.2962962962962963",
         "screenPageViewPerUser": "1.4285714285714286",
-        "averageSessionDuration": "51.9310207037037",
+        "averageSessionDuration": "51.931020703703716",
         "bounceRate": "0.092592592592592587"
     },
     {
-        "pagePath": "/quero/mentoria/",
+        "pagePath": "/trilhas/github-starter/",
         "year": "2024",
         "month": "02",
-        "activeUsers": "43",
-        "screenPageViews": "50",
-        "screenPageViewsPerSession": "1.1627906976744187",
-        "screenPageViewPerUser": "1.1627906976744187",
-        "averageSessionDuration": "15.80568546511628",
-        "bounceRate": "0.16279069767441862"
-    },
-    {
-        "pagePath": "/google-colab/python-101/",
-        "year": "2024",
-        "month": "02",
-        "activeUsers": "40",
-        "screenPageViews": "63",
-        "screenPageViewsPerSession": "1.125",
-        "screenPageViewPerUser": "1.575",
-        "averageSessionDuration": "244.91182842857143",
-        "bounceRate": "0.32142857142857145"
+        "activeUsers": "46",
+        "screenPageViews": "61",
+        "screenPageViewsPerSession": "0.9838709677419355",
+        "screenPageViewPerUser": "1.326086956521739",
+        "averageSessionDuration": "87.498997887096778",
+        "bounceRate": "0.32258064516129031"
     },
     {
         "pagePath": "/trilhas/html5/",
@@ -110,28 +143,6 @@
         "bounceRate": "0.13043478260869565"
     },
     {
-        "pagePath": "/trilhas/github-starter/",
-        "year": "2024",
-        "month": "02",
-        "activeUsers": "37",
-        "screenPageViews": "43",
-        "screenPageViewsPerSession": "0.97727272727272729",
-        "screenPageViewPerUser": "1.1621621621621621",
-        "averageSessionDuration": "116.30874875",
-        "bounceRate": "0.27272727272727271"
-    },
-    {
-        "pagePath": "/quero/estudar/",
-        "year": "2024",
-        "month": "02",
-        "activeUsers": "30",
-        "screenPageViews": "38",
-        "screenPageViewsPerSession": "1.2666666666666666",
-        "screenPageViewPerUser": "1.2666666666666666",
-        "averageSessionDuration": "21.064239666666666",
-        "bounceRate": "0"
-    },
-    {
         "pagePath": "/team/",
         "year": "2024",
         "month": "01",
@@ -143,15 +154,48 @@
         "bounceRate": "0.0625"
     },
     {
-        "pagePath": "/team/",
+        "pagePath": "/google-colab/github-101/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "24",
+        "screenPageViews": "31",
+        "screenPageViewsPerSession": "0.91176470588235292",
+        "screenPageViewPerUser": "1.2916666666666667",
+        "averageSessionDuration": "15.118473029411765",
+        "bounceRate": "0.41176470588235292"
+    },
+    {
+        "pagePath": "/trilhas/javascript/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "24",
+        "screenPageViews": "82",
+        "screenPageViewsPerSession": "1.1714285714285715",
+        "screenPageViewPerUser": "3.4166666666666665",
+        "averageSessionDuration": "186.72993602857142",
+        "bounceRate": "0.58571428571428574"
+    },
+    {
+        "pagePath": "/trilhas/python/",
         "year": "2024",
         "month": "02",
         "activeUsers": "22",
-        "screenPageViews": "31",
-        "screenPageViewsPerSession": "1.24",
-        "screenPageViewPerUser": "1.4090909090909092",
-        "averageSessionDuration": "12.544791440000001",
-        "bounceRate": "0.04"
+        "screenPageViews": "36",
+        "screenPageViewsPerSession": "0.972972972972973",
+        "screenPageViewPerUser": "1.6363636363636365",
+        "averageSessionDuration": "171.31939335135135",
+        "bounceRate": "0.56756756756756754"
+    },
+    {
+        "pagePath": "/blog/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "15",
+        "screenPageViews": "21",
+        "screenPageViewsPerSession": "1.3125",
+        "screenPageViewPerUser": "1.4",
+        "averageSessionDuration": "11.0524418125",
+        "bounceRate": "0"
     },
     {
         "pagePath": "/trilhas/produtos-digitais/",
@@ -165,28 +209,6 @@
         "bounceRate": "0.0625"
     },
     {
-        "pagePath": "/trilhas/javascript/",
-        "year": "2024",
-        "month": "02",
-        "activeUsers": "13",
-        "screenPageViews": "52",
-        "screenPageViewsPerSession": "1.2093023255813953",
-        "screenPageViewPerUser": "4",
-        "averageSessionDuration": "250.42555393023255",
-        "bounceRate": "0.55813953488372092"
-    },
-    {
-        "pagePath": "/trilhas/python/",
-        "year": "2024",
-        "month": "02",
-        "activeUsers": "13",
-        "screenPageViews": "25",
-        "screenPageViewsPerSession": "1.0869565217391304",
-        "screenPageViewPerUser": "1.9230769230769231",
-        "averageSessionDuration": "248.35854686956523",
-        "bounceRate": "0.60869565217391308"
-    },
-    {
         "pagePath": "/blog/",
         "year": "2024",
         "month": "01",
@@ -194,19 +216,30 @@
         "screenPageViews": "13",
         "screenPageViewsPerSession": "1.3",
         "screenPageViewPerUser": "1.3",
-        "averageSessionDuration": "14.244985199999999",
+        "averageSessionDuration": "14.244985200000002",
         "bounceRate": "0"
     },
     {
-        "pagePath": "/google-colab/github-101/",
+        "pagePath": "/conduta/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "10",
+        "screenPageViews": "11",
+        "screenPageViewsPerSession": "0.84615384615384615",
+        "screenPageViewPerUser": "1.1",
+        "averageSessionDuration": "240.76683315384614",
+        "bounceRate": "0.15384615384615385"
+    },
+    {
+        "pagePath": "/ong/",
         "year": "2024",
         "month": "02",
         "activeUsers": "9",
-        "screenPageViews": "10",
-        "screenPageViewsPerSession": "0.90909090909090906",
-        "screenPageViewPerUser": "1.1111111111111112",
-        "averageSessionDuration": "10.989654454545455",
-        "bounceRate": "0.27272727272727271"
+        "screenPageViews": "14",
+        "screenPageViewsPerSession": "1.1666666666666667",
+        "screenPageViewPerUser": "1.5555555555555556",
+        "averageSessionDuration": "46.994871916666661",
+        "bounceRate": "0.25"
     },
     {
         "pagePath": "/contact/",
@@ -227,7 +260,29 @@
         "screenPageViews": "12",
         "screenPageViewsPerSession": "1.3333333333333333",
         "screenPageViewPerUser": "1.5",
-        "averageSessionDuration": "21.967473111111115",
+        "averageSessionDuration": "21.967473111111108",
+        "bounceRate": "0"
+    },
+    {
+        "pagePath": "/contact/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "7",
+        "screenPageViews": "7",
+        "screenPageViewsPerSession": "1",
+        "screenPageViewPerUser": "1",
+        "averageSessionDuration": "3.057461142857143",
+        "bounceRate": "0"
+    },
+    {
+        "pagePath": "/pais_responsaveis/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "7",
+        "screenPageViews": "9",
+        "screenPageViewsPerSession": "1.2857142857142858",
+        "screenPageViewPerUser": "1.2857142857142858",
+        "averageSessionDuration": "39.493199714285709",
         "bounceRate": "0"
     },
     {
@@ -253,14 +308,14 @@
         "bounceRate": "0"
     },
     {
-        "pagePath": "/blog/",
+        "pagePath": "/timeline/",
         "year": "2024",
         "month": "02",
-        "activeUsers": "5",
-        "screenPageViews": "9",
-        "screenPageViewsPerSession": "1.5",
-        "screenPageViewPerUser": "1.8",
-        "averageSessionDuration": "15.394600833333334",
+        "activeUsers": "6",
+        "screenPageViews": "8",
+        "screenPageViewsPerSession": "1.3333333333333333",
+        "screenPageViewPerUser": "1.3333333333333333",
+        "averageSessionDuration": "65.291146500000011",
         "bounceRate": "0"
     },
     {
@@ -297,28 +352,6 @@
         "bounceRate": "0.4"
     },
     {
-        "pagePath": "/ong/",
-        "year": "2024",
-        "month": "02",
-        "activeUsers": "4",
-        "screenPageViews": "7",
-        "screenPageViewsPerSession": "1",
-        "screenPageViewPerUser": "1.75",
-        "averageSessionDuration": "5.8735690000000007",
-        "bounceRate": "0.42857142857142855"
-    },
-    {
-        "pagePath": "/pais_responsaveis/",
-        "year": "2024",
-        "month": "02",
-        "activeUsers": "4",
-        "screenPageViews": "5",
-        "screenPageViewsPerSession": "1.25",
-        "screenPageViewPerUser": "1.25",
-        "averageSessionDuration": "56.9649905",
-        "bounceRate": "0"
-    },
-    {
         "pagePath": "/trilhas/",
         "year": "2024",
         "month": "01",
@@ -330,25 +363,14 @@
         "bounceRate": "0.4"
     },
     {
-        "pagePath": "/conduta/",
+        "pagePath": "/trilhas/css3/",
         "year": "2024",
         "month": "02",
-        "activeUsers": "3",
-        "screenPageViews": "3",
+        "activeUsers": "4",
+        "screenPageViews": "4",
         "screenPageViewsPerSession": "1",
         "screenPageViewPerUser": "1",
-        "averageSessionDuration": "2.0485963333333337",
-        "bounceRate": "0"
-    },
-    {
-        "pagePath": "/contact/",
-        "year": "2024",
-        "month": "02",
-        "activeUsers": "3",
-        "screenPageViews": "3",
-        "screenPageViewsPerSession": "1",
-        "screenPageViewPerUser": "1",
-        "averageSessionDuration": "3.4071606666666665",
+        "averageSessionDuration": "33.243376250000004",
         "bounceRate": "0"
     },
     {
@@ -363,25 +385,14 @@
         "bounceRate": "0"
     },
     {
-        "pagePath": "/timeline/",
-        "year": "2024",
-        "month": "02",
-        "activeUsers": "3",
-        "screenPageViews": "3",
-        "screenPageViewsPerSession": "1",
-        "screenPageViewPerUser": "1",
-        "averageSessionDuration": "30.312997",
-        "bounceRate": "0"
-    },
-    {
         "pagePath": "/bio/",
         "year": "2024",
         "month": "02",
         "activeUsers": "2",
-        "screenPageViews": "2",
-        "screenPageViewsPerSession": "1",
-        "screenPageViewPerUser": "1",
-        "averageSessionDuration": "28.1369465",
+        "screenPageViews": "6",
+        "screenPageViewsPerSession": "1.5",
+        "screenPageViewPerUser": "3",
+        "averageSessionDuration": "198.00402350000002",
         "bounceRate": "0.5"
     },
     {
@@ -440,6 +451,39 @@
         "bounceRate": "0"
     },
     {
+        "pagePath": "/blog/2023/01/05/codaqui-na-confer\u00eancia-do-devpr-2023/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "1",
+        "screenPageViews": "2",
+        "screenPageViewsPerSession": "2",
+        "screenPageViewPerUser": "2",
+        "averageSessionDuration": "8.533355",
+        "bounceRate": "0"
+    },
+    {
+        "pagePath": "/blog/2023/02/14/devpr-starter---codaqui/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "1",
+        "screenPageViews": "3",
+        "screenPageViewsPerSession": "1.5",
+        "screenPageViewPerUser": "3",
+        "averageSessionDuration": "12.065104999999999",
+        "bounceRate": "0.5"
+    },
+    {
+        "pagePath": "/blog/2023/03/01/codaqui-e-seu-boletim-de-seguran\u00e7a/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "1",
+        "screenPageViews": "1",
+        "screenPageViewsPerSession": "1",
+        "screenPageViewPerUser": "1",
+        "averageSessionDuration": "50.950997",
+        "bounceRate": "0"
+    },
+    {
         "pagePath": "/blog/2023/03/11/sucesso-na-inova\u00e7\u00e3o-do-devpr-2023/",
         "year": "2024",
         "month": "01",
@@ -459,6 +503,17 @@
         "screenPageViewsPerSession": "1",
         "screenPageViewPerUser": "1",
         "averageSessionDuration": "9.495562",
+        "bounceRate": "0"
+    },
+    {
+        "pagePath": "/blog/category/projetos/",
+        "year": "2024",
+        "month": "02",
+        "activeUsers": "1",
+        "screenPageViews": "1",
+        "screenPageViewsPerSession": "1",
+        "screenPageViewPerUser": "1",
+        "averageSessionDuration": "17.667192",
         "bounceRate": "0"
     },
     {
@@ -492,17 +547,6 @@
         "screenPageViewsPerSession": "1",
         "screenPageViewPerUser": "1",
         "averageSessionDuration": "2.917105",
-        "bounceRate": "0"
-    },
-    {
-        "pagePath": "/trilhas/css3/",
-        "year": "2024",
-        "month": "02",
-        "activeUsers": "1",
-        "screenPageViews": "1",
-        "screenPageViewsPerSession": "1",
-        "screenPageViewPerUser": "1",
-        "averageSessionDuration": "5.194736",
         "bounceRate": "0"
     },
     {
