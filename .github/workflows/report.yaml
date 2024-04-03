@@ -5,11 +5,25 @@ on:
     # First day of the month at 2:00 UTC is on BRL last day of the month at 23:00
     - cron: '0 2 1 * *'
   workflow_dispatch:
-    - inputs:
-      - MONTH:
-          description: 'Month to generate the report'
-          required: true
-          default: 'last_month'
+    inputs:
+      month:
+        description: 'Month to generate the report'
+        required: true
+        default: last_montj
+        options:
+          - 01
+          - 02
+          - 03
+          - 04
+          - 05
+          - 06
+          - 07
+          - 08
+          - 09
+          - 10
+          - 11
+          - 12
+          - last_month
 
 jobs:
   build:
@@ -34,7 +48,7 @@ jobs:
 
     - name: Run report
       run: |
-        poetry run python main.py ${{secrets.PROPERTY_ID}} $(bash calculate_dates.sh ${{ github.event.inputs.MONTH }})
+        poetry run python main.py ${{secrets.PROPERTY_ID}} $(bash calculate_dates.sh ${{ github.event.inputs.month }})
       env:
         SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.SERVICE_ACCOUNT_CREDENTIALS }}
         PROPERTY_ID: ${{ secrets.PROPERTY_ID }}
