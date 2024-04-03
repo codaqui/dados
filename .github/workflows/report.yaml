@@ -30,6 +30,10 @@ jobs:
     - name: Poetry install
       run: poetry install --no-dev --no-root
 
+    - name: "🤫 Secret"
+      run: |
+        echo ${SERVICE_ACCOUNT_CREDENTIALS} > service_account.json
+
     - name: Run report
       run: |
         poetry run python main.py ${{secrets.PROPERTY_ID}} $(bash calculate_dates.sh ${{ github.event.inputs.month }})
