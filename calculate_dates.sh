@@ -1,7 +1,7 @@
 # Author: Enderson Menezes
 # Usage: bash calculate_dates.sh ARG1
 # Arg1 = last_month or integer 01 --> 12
-# Return = DD/MM/YYYY DD/MM/YYYY
+# Return = DD-MM-YYYY DD-MM-YYYY
 
 ARGUMENT=$1
 if [[ $ARGUMENT =~ ^[0-9]{2}$ ]]; then
@@ -14,6 +14,6 @@ else
     echo "Invalid argument. Please use last_month or integer 01 --> 12"
     exit 1
 fi
-FIRST_DAY_MONTH=$(date -d $FIRST_DAY_MONTH +%d/%m/%Y)
-LAST_DAY_MONTH=$(date -d $LAST_DAY_MONTH +%d/%m/%Y)
+FIRST_DAY_MONTH=$(date -d $FIRST_DAY_MONTH +%d-%m-%Y)
+LAST_DAY_MONTH=$(date -d $LAST_DAY_MONTH +%d-%m-%Y)
 echo $FIRST_DAY_MONTH $LAST_DAY_MONTH
