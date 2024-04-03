@@ -33,12 +33,13 @@ jobs:
     - name: "🤫 Secret"
       run: |
         echo ${SERVICE_ACCOUNT_CREDENTIALS} > service_account.json
+      env:
+        SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.SERVICE_ACCOUNT_CREDENTIALS }}
 
     - name: Run report
       run: |
         poetry run python main.py ${{secrets.PROPERTY_ID}} $(bash calculate_dates.sh ${{ github.event.inputs.month }})
       env:
-        SERVICE_ACCOUNT_CREDENTIALS: ${{ secrets.SERVICE_ACCOUNT_CREDENTIALS }}
         PROPERTY_ID: ${{ secrets.PROPERTY_ID }}
 
     - name: Commit and push changes
