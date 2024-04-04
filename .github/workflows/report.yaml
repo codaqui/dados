@@ -47,7 +47,5 @@ jobs:
         git config --global user.email "contato@codaqui.dev"
         git config --global user.name "Codaqui Bot"
         git add .
-        DATE=$(date +"%d-%m-%Y")
-        FIRST_DAY=$(date -d "-1 month" +%Y-%m-01)
-        git commit -m "Update report for $FIRST_DAY - $DATE"
+        git commit -m "Update report for $(bash calculate_dates.sh ${{ github.event.inputs.month }})"
         git push origin HEAD:main

@@ -176,7 +176,7 @@ logging.basicConfig(level=logging.INFO)
 os.makedirs("data", exist_ok=True)
 
 # Create a month folder to save the data
-month_folder = datetime.now().strftime("%Y-%m")
+month_folder = datetime.strptime(start_date_arg, "%Y-%m-%d").strftime("%Y-%m")
 os.makedirs(f"data/{month_folder}", exist_ok=True)
 folder_path = f"data/{month_folder}"
 
