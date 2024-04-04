@@ -11,6 +11,12 @@
 - [ ] Certificados Gerados
 - [ ] Doadores Apoia.se
 
+## Streamlit
+
+- Status: IN DEVELOPMENT
+- Command: `poetry run streamlit run main.py`
+- Running on Raspberry Pi4 4GB
+
 
 ## Desenvolvimento/Colaboração
 
