@@ -17,3 +17,6 @@ jobs:
     - name: "Move files to /opt/streamlit"
       run: |
         sudo cp -r . /opt/streamlit
+        sudo cp streamlit.service /etc/systemd/system/streamlit.service
+        sudo systemctl daemon-reload
+        sudo systemctl restart streamlit

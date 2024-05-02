@@ -1,0 +1,12 @@
+[Unit]
+Description=Streamlit Service
+
+[Service]
+User=root
+WorkingDirectory=/opt/streamlit
+ExecStart=poetry run streamlit run streamlit/main.py --server.runOnSave true --ui.hideTopBar true
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target
