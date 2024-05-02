@@ -38,7 +38,10 @@ jobs:
 
     - name: Run report
       run: |
-        poetry run python main.py ${{secrets.PROPERTY_ID}} $(bash calculate_dates.sh ${{ github.event.inputs.month }})
+        STRING_DATES=$(bash calculate_dates.sh ${{ github.event.inputs.month }})
+        START_DATE=$(echo $STRING_DATES | cut -d' ' -f1)
+        END_DATE=$(echo $STRING_DATES | cut -d' ' -f2)
+        poetry run python main.py ${{secrets.PROPERTY_ID}} $START_DATE $END_DATE
       env:
         PROPERTY_ID: ${{ secrets.PROPERTY_ID }}
 
