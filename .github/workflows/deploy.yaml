@@ -14,11 +14,6 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: "View Directory"
-      run:
-        echo "LS"
-        ls
-        echo "PWD"
-        pwd
-        echo "~"
-        ls ~
+    - name: "Move files to /opt/streamlit"
+      run: |
+        sudo cp -r . /opt/streamlit
