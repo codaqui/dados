@@ -10,7 +10,7 @@ license = "MIT"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12"
+python = "^3.11"
 pandas = "^2.2.0"
 asyncio = "^3.4.3"
 google-analytics-data = "^0.18.5"
