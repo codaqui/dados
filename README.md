@@ -14,8 +14,13 @@
 ## Streamlit
 
 - Status: IN DEVELOPMENT
-- Command: `poetry run streamlit run main.py`
 - Running on Raspberry Pi4 4GB
+- Command:
+```bash
+poetry run streamlit run streamlit/main.py \
+    --server.runOnSave true \
+    --ui.hideTopBar true
+```
 
 
 ## Desenvolvimento/Colaboração
