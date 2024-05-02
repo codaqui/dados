@@ -18,5 +18,7 @@ jobs:
       run: |
         sudo cp -r . /opt/streamlit
         sudo cp streamlit.service /etc/systemd/system/streamlit.service
+        cd /opt/streamlit
+        poetry install
         sudo systemctl daemon-reload
         sudo systemctl restart streamlit
