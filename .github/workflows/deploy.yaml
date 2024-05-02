@@ -14,7 +14,11 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up Python 3.12
-      uses: actions/setup-python@v5
-      with:
-        python-version: 3.12
+    - name: "View Directory"
+      run:
+        echo "LS"
+        ls
+        echo "PWD"
+        pwd
+        echo "~"
+        ls ~
