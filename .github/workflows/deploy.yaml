@@ -1,4 +1,4 @@
-name: Deploy on Raspberry Pi
+name: "Deploy on Raspberry Pi"
 
 on:
   push:
