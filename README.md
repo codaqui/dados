@@ -14,7 +14,7 @@
 ## Streamlit
 
 - Status: IN DEVELOPMENT
-- Running on Raspberry Pi4 4GB
+- Running on Raspberry Pi4 8GB
 - Command:
 ```bash
 poetry run streamlit run streamlit/main.py \
