@@ -16,6 +16,12 @@
 - Status: Running
 - Server: https://share.streamlit.io/
 
+## Local Development
+
+```bash
+poetry run streamlit run streamlit/main.py
+```
+
 
 ## Desenvolvimento/Colaboração
 
