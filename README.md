@@ -14,7 +14,8 @@
 ## Streamlit
 
 - Status: Running
-- Server: https://share.streamlit.io/
+- ServerAdmin: https://share.streamlit.io/
+- ServerAccess: https://codaqui.streamlit.app/
 
 ## Local Development
 
