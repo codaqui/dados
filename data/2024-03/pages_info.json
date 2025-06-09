@@ -7,7 +7,7 @@
         "screenPageViews": "3236",
         "screenPageViewsPerSession": "1.144676335337814",
         "screenPageViewPerUser": "1.2097196261682244",
-        "averageSessionDuration": "58.390350688008496",
+        "averageSessionDuration": "58.390350688008489",
         "bounceRate": "0.440042447824549"
     },
     {
@@ -18,7 +18,7 @@
         "screenPageViews": "1454",
         "screenPageViewsPerSession": "1.039313795568263",
         "screenPageViewPerUser": "1.5925520262869661",
-        "averageSessionDuration": "155.96931728806288",
+        "averageSessionDuration": "155.96931728806291",
         "bounceRate": "0.40743388134381703"
     },
     {
@@ -29,7 +29,7 @@
         "screenPageViews": "317",
         "screenPageViewsPerSession": "1.1962264150943396",
         "screenPageViewPerUser": "1.3782608695652174",
-        "averageSessionDuration": "48.050815558490584",
+        "averageSessionDuration": "48.050815558490577",
         "bounceRate": "0.13584905660377358"
     },
     {
@@ -51,7 +51,7 @@
         "screenPageViews": "205",
         "screenPageViewsPerSession": "1.2424242424242424",
         "screenPageViewPerUser": "1.3057324840764331",
-        "averageSessionDuration": "68.846918072727263",
+        "averageSessionDuration": "68.846918072727277",
         "bounceRate": "0.012121212121212121"
     },
     {
@@ -62,7 +62,7 @@
         "screenPageViews": "158",
         "screenPageViewsPerSession": "1.2061068702290076",
         "screenPageViewPerUser": "1.264",
-        "averageSessionDuration": "37.740073763358765",
+        "averageSessionDuration": "37.74007376335878",
         "bounceRate": "0"
     },
     {
@@ -128,7 +128,7 @@
         "screenPageViews": "29",
         "screenPageViewsPerSession": "1.2083333333333333",
         "screenPageViewPerUser": "1.6111111111111112",
-        "averageSessionDuration": "290.23707579166665",
+        "averageSessionDuration": "290.23707579166671",
         "bounceRate": "0.25"
     },
     {
@@ -150,7 +150,7 @@
         "screenPageViews": "19",
         "screenPageViewsPerSession": "1.1875",
         "screenPageViewPerUser": "1.2666666666666666",
-        "averageSessionDuration": "13.2946681875",
+        "averageSessionDuration": "13.294668187500001",
         "bounceRate": "0.0625"
     },
     {
@@ -183,7 +183,7 @@
         "screenPageViews": "130",
         "screenPageViewsPerSession": "1.1818181818181819",
         "screenPageViewPerUser": "11.818181818181818",
-        "averageSessionDuration": "173.34772202727274",
+        "averageSessionDuration": "173.34772202727271",
         "bounceRate": "0.71818181818181814"
     },
     {
@@ -194,7 +194,7 @@
         "screenPageViews": "24",
         "screenPageViewsPerSession": "1.411764705882353",
         "screenPageViewPerUser": "3",
-        "averageSessionDuration": "69.887533294117645",
+        "averageSessionDuration": "69.887533294117631",
         "bounceRate": "0.35294117647058826"
     },
     {
@@ -205,7 +205,7 @@
         "screenPageViews": "11",
         "screenPageViewsPerSession": "1.375",
         "screenPageViewPerUser": "1.375",
-        "averageSessionDuration": "12.072223625",
+        "averageSessionDuration": "12.072223625000001",
         "bounceRate": "0"
     },
     {
@@ -348,7 +348,7 @@
         "screenPageViews": "9",
         "screenPageViewsPerSession": "2.25",
         "screenPageViewPerUser": "4.5",
-        "averageSessionDuration": "30.606009999999998",
+        "averageSessionDuration": "30.60601",
         "bounceRate": "0"
     },
     {
