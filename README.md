@@ -5,11 +5,17 @@
 - Projeto mensalmente realiza a captura de dados.
 - Projeto mantém e publica o Streamlit.
 
-## Dados Capturados
+## Configuração do Projeto
 
-- [X] Google Analytics
-- [ ] Certificados Gerados
-- [ ] Doadores Apoia.se
+- Google Console: `codaqui-dados (58624089208)`
+- Property ID: `337372858`
+
+
+## Dados Capturados [TODO]
+
+- [X] Google Analytics;
+- [ ] Certificados Gerados;
+- [ ] Doadores OpenCollective.
 
 ## Streamlit
 

@@ -154,7 +154,8 @@ async def sample_run_report(
 # Validate args
 if len(sys.argv) != 4:
     raise ValueError(
-        "Invalid arguments, use example: python main.py property_id start_date end_date"
+        "Invalid arguments, use example: python main.py property_id(int) start_date(str) end_date(str)"
+        " where start_date and end_date are in the format DD-MM-YYYY."
     )
 
 # Retrieve args
