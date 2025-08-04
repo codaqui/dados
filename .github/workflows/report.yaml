@@ -3,7 +3,7 @@ name: Report Update
 on:
   schedule:
   # All Monday - 19:28 BRL
-    - cron: "28 19 * * 1"
+    - cron: "29 22 * * 1"
   workflow_dispatch:
     inputs:
       month:
