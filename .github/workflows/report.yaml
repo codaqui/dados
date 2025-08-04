@@ -2,7 +2,7 @@ name: Report Update
 
 on:
   schedule:
-  # All Monday - 19:05 BRL
+  # All Monday - 19:07 BRL
     - cron: "5 22 * * 1"
   workflow_dispatch:
     inputs:
@@ -42,6 +42,7 @@ jobs:
 
     - name: Run report
       run: |
+        echo $GITHUB_EVENT_NAME
         STRING_DATES=$(bash calculate_dates.sh ${{ github.event.inputs.month }})
         START_DATE=$(echo $STRING_DATES | cut -d' ' -f1)
         END_DATE=$(echo $STRING_DATES | cut -d' ' -f2)
