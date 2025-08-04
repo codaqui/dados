@@ -2,8 +2,8 @@ name: Report Update
 
 on:
   schedule:
-  # Monday - 19:10 BRL
-    - cron: "10 22 * * 1"
+  # All Monday - 19:05 BRL
+    - cron: "5 22 * * 1"
   workflow_dispatch:
     inputs:
       month:
