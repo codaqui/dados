@@ -2,8 +2,8 @@ name: Report Update
 
 on:
   schedule:
-  # All Monday - 19:36 BRL in UTC
-    - cron: "36 22 * * 1"
+  # All 02 day from month in UTC at 00:00
+    - cron: "00 00 2 * *"
   workflow_dispatch:
     inputs:
       month:
