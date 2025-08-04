@@ -42,7 +42,6 @@ jobs:
 
     - name: Run report
       run: |
-        echo $GITHUB_EVENT_NAME
         STRING_DATES=$(bash calculate_dates.sh ${{ github.event.inputs.month }})
         START_DATE=$(echo $STRING_DATES | cut -d' ' -f1)
         END_DATE=$(echo $STRING_DATES | cut -d' ' -f2)
