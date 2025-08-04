@@ -3,6 +3,8 @@
 # Arg1 = last_month or integer 01 --> 12
 # Return = DD-MM-YYYY DD-MM-YYYY
 
+echo $GITHUB_EVENT_NAME
+
 ARGUMENT=$1
 if [[ $ARGUMENT =~ ^[0-9]{2}$ ]]; then
     FIRST_DAY_MONTH=$(date -d "$(date +%Y)-$ARGUMENT-01" +%Y-%m-%d)
